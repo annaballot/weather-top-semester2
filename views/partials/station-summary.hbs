@@ -1,0 +1,58 @@
+<div class="content box">
+  <div class="columns is-multiline">
+  <div class="column is-one-fifth">
+    <div class="box has-background-black has-text-white">
+      <h2 class="title has-text-white">{{station.title}}</h2>
+      <br>
+      Lat: {{station.latitude}}
+      <br>
+      Lng: {{station.longitude}}
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="column is-one-fifth">
+    <div class="box has-background-black has-text-white">
+      <h2 class="title has-text-white">Weather</h2>
+      {{latestReading.weatherDescription}}
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="column is-one-fifth">
+    <div class="box has-background-black has-text-white">
+      <h2 class="title has-text-white">Temp</h2>
+      {{latestReading.temperature}} C
+      <br>
+      {{latestReading.temperatureFahrenheit}} F
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="column is-one-fifth">
+    <div class="box has-background-black has-text-white">
+      <h2 class="title has-text-white">Wind</h2>
+      {{latestReading.windBeaufort}} BFT
+      <br>
+      {{latestReading.compassDirection}}
+      <br>
+      Feels Like
+      <br>
+      {{latestReading.windChill}}
+    </div>
+  </div>
+  <div class="column is-one-fifth">
+    <div class="box has-background-black has-text-white">
+      <h2 class="title has-text-white">Pressure</h2>
+      {{latestReading.pressure}} hpa
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+</div>

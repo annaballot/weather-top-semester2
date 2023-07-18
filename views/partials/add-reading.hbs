@@ -1,0 +1,34 @@
+<form class="box" action="/station/{{station._id}}/addreading" method="POST">
+  <label class="label">Add a Reading:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <div class="select">
+          <select name="code">
+            <option value="100">Clear</option>
+            <option value="200">Partial Clouds</option>
+            <option value="300">Cloudy</option>
+            <option value="400">Light Showers</option>
+            <option value="500">Heavy Showers</option>
+            <option value="600">Rain</option>
+            <option value="700">Snow</option>
+            <option value="800">Thunder</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <input class="input" type="number" placeholder="0.00C" name="temperature" step=".01" required>
+      </div>
+      <div class="field">
+        <input class="input" type="number" placeholder="00.00KM/H" name="windSpeed"  step=".01" min="0" required>
+      </div>
+      <div class="field">
+        <input class="input" type="number" placeholder="000deg" name="windDirection"  min="0" max="360" required>
+      </div>
+      <div class="field">
+        <input class="input" type="number" placeholder="000hPa" name="pressure"  min="800" max="1100" required>
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Reading</button>
+</form>

@@ -1,0 +1,33 @@
+{
+  "file": "./models/readings.json",
+  "readings": [
+    {
+      "code": 800,
+      "temperature": 20.03,
+      "windSpeed": 15.9,
+      "windDirection": 54,
+      "pressure": 1002,
+      "temperatureFahrenheit": 68.054,
+      "weatherDescription": "Thunder",
+      "compassDirection": "Northeast",
+      "windBeaufort": 3,
+      "windChill": 20.2,
+      "_id": "452abba2-2db9-4c3c-9daa-b6360ad2d4fd",
+      "stationid": "31fcaffb-32e8-40b7-9547-cd540030fbdf"
+    },
+    {
+      "code": 500,
+      "temperature": 14.9,
+      "windSpeed": 5.6,
+      "windDirection": 196,
+      "pressure": 1003,
+      "temperatureFahrenheit": 58.82,
+      "weatherDescription": "Heavy Showers",
+      "compassDirection": "South-Southwest",
+      "windBeaufort": 1,
+      "windChill": 15.2,
+      "_id": "8216aa27-d086-48fa-a10e-a127915842da",
+      "stationid": "31fcaffb-32e8-40b7-9547-cd540030fbdf"
+    }
+  ]
+}
