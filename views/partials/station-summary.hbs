@@ -9,12 +9,16 @@
       Lng: {{station.longitude}}
       <br>
       <br>
+      <br>
+      <br>
     </div>
   </div>
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
       <h2 class="title has-text-white">Weather</h2>
       {{latestReading.weatherDescription}}
+      <br>
+      <br>
       <br>
       <br>
       <br>
@@ -27,6 +31,10 @@
       {{latestReading.temperature}} C
       <br>
       {{latestReading.temperatureFahrenheit}} F
+      <br>
+      Max: {{maxTemperature}}
+      <br>
+      Min: {{minTemperature}}
       <br>
       <br>
       <br>
@@ -42,12 +50,20 @@
       Feels Like
       <br>
       {{latestReading.windChill}}
+      <br>
+      Max: {{maxWindSpeed}}
+      <br>
+      Min: {{minWindSpeed}}
     </div>
   </div>
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
       <h2 class="title has-text-white">Pressure</h2>
       {{latestReading.pressure}} hpa
+      <br>
+      Max: {{maxPressure}}
+      <br>
+      Min: {{minPressure}}
       <br>
       <br>
       <br>
