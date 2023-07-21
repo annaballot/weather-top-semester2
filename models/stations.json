@@ -3,24 +3,62 @@
   "stations": [
     {
       "title": "Dungarvan",
-      "latitude": 58,
-      "longitude": 69,
-      "userid": "35abc202-2ecf-4d59-808b-aa33bb34a53c",
-      "_id": "31fcaffb-32e8-40b7-9547-cd540030fbdf"
-    },
-    {
-      "title": "Ring",
-      "latitude": 72,
-      "longitude": 12,
-      "userid": "35abc202-2ecf-4d59-808b-aa33bb34a53c",
-      "_id": "638bda52-1a14-4bb5-9694-5a88f685dd10"
-    },
-    {
-      "title": "Dunmore",
-      "latitude": 46,
-      "longitude": -15,
-      "userid": "c8cc97ac-a1d3-452f-97df-ab1f37a31479",
-      "_id": "27b2cc0f-b23d-43b0-a1ae-64e2ae8ee83c"
+      "latitude": 15,
+      "longitude": -87,
+      "userid": "0abddb67-0d22-4ea1-a04b-d8ea13b85ee5",
+      "_id": "0e117a01-a953-4cd0-a74a-ba17864e1b71",
+      "readings": [
+        {
+          "code": 800,
+          "temperature": 10,
+          "windSpeed": 15,
+          "windDirection": 271,
+          "pressure": 1002,
+          "temperatureFahrenheit": 50,
+          "weatherDescription": "Thunder",
+          "compassDirection": "West",
+          "windBeaufort": 3,
+          "windChill": 7.9,
+          "_id": "a89787f8-f200-4b73-898e-9e9d8799278d",
+          "stationid": "0e117a01-a953-4cd0-a74a-ba17864e1b71"
+        },
+        {
+          "code": 100,
+          "temperature": 30,
+          "windSpeed": 5,
+          "windDirection": 12,
+          "pressure": 990,
+          "temperatureFahrenheit": 86,
+          "weatherDescription": "Clear",
+          "compassDirection": "North-Northeast",
+          "windBeaufort": 1,
+          "windChill": 32.4,
+          "_id": "b3262d5e-533d-40c0-a0e5-137b9de50da3",
+          "stationid": "0e117a01-a953-4cd0-a74a-ba17864e1b71"
+        },
+        {
+          "code": 700,
+          "temperature": 12,
+          "windSpeed": 15,
+          "windDirection": 10,
+          "pressure": 1000,
+          "_id": "5aa09525-931b-4741-b917-cd26e7ade909",
+          "stationid": "0e117a01-a953-4cd0-a74a-ba17864e1b71"
+        }
+      ],
+      "latestWeatherDescription": "Snow",
+      "latestTempC": 12,
+      "latestTempF": 53.6,
+      "latestBFT": 3,
+      "latestCompassDirection": "North",
+      "latestWindChill": 10.4,
+      "latestPressure": 1000,
+      "maxTemperature": 30,
+      "minTemperature": 10,
+      "maxWindSpeed": 15,
+      "minWindSpeed": 5,
+      "maxPressure": 1002,
+      "minPressure": 990
     }
   ]
 }

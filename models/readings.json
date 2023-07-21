@@ -3,31 +3,40 @@
   "readings": [
     {
       "code": 800,
-      "temperature": 20.03,
-      "windSpeed": 15.9,
-      "windDirection": 54,
+      "temperature": 10,
+      "windSpeed": 15,
+      "windDirection": 271,
       "pressure": 1002,
-      "temperatureFahrenheit": 68.054,
+      "temperatureFahrenheit": 50,
       "weatherDescription": "Thunder",
-      "compassDirection": "Northeast",
+      "compassDirection": "West",
       "windBeaufort": 3,
-      "windChill": 20.2,
-      "_id": "452abba2-2db9-4c3c-9daa-b6360ad2d4fd",
-      "stationid": "31fcaffb-32e8-40b7-9547-cd540030fbdf"
+      "windChill": 7.9,
+      "_id": "a89787f8-f200-4b73-898e-9e9d8799278d",
+      "stationid": "0e117a01-a953-4cd0-a74a-ba17864e1b71"
     },
     {
-      "code": 500,
-      "temperature": 14.9,
-      "windSpeed": 5.6,
-      "windDirection": 196,
-      "pressure": 1003,
-      "temperatureFahrenheit": 58.82,
-      "weatherDescription": "Heavy Showers",
-      "compassDirection": "South-Southwest",
+      "code": 100,
+      "temperature": 30,
+      "windSpeed": 5,
+      "windDirection": 12,
+      "pressure": 990,
+      "temperatureFahrenheit": 86,
+      "weatherDescription": "Clear",
+      "compassDirection": "North-Northeast",
       "windBeaufort": 1,
-      "windChill": 15.2,
-      "_id": "8216aa27-d086-48fa-a10e-a127915842da",
-      "stationid": "31fcaffb-32e8-40b7-9547-cd540030fbdf"
+      "windChill": 32.4,
+      "_id": "b3262d5e-533d-40c0-a0e5-137b9de50da3",
+      "stationid": "0e117a01-a953-4cd0-a74a-ba17864e1b71"
+    },
+    {
+      "code": 700,
+      "temperature": 12,
+      "windSpeed": 15,
+      "windDirection": 10,
+      "pressure": 1000,
+      "_id": "5aa09525-931b-4741-b917-cd26e7ade909",
+      "stationid": "0e117a01-a953-4cd0-a74a-ba17864e1b71"
     }
   ]
 }

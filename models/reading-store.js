@@ -1,6 +1,7 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 
+
 const db = initStore("readings");
 
 export const readingStore = {
@@ -40,14 +41,14 @@ export const readingStore = {
     await db.write();
   },
 
-  async updateReading(reading, updatedReading) {
-    reading.title = updatedReading.title;
-    reading.artist = updatedReading.artist;
-    reading.duration = updatedReading.duration;
-    await db.write();
-  },
-  
-  // async convertTempToFahrenheit() {
-  // conversions.convertTempToFahrenheit(reading.temperature);
+  // async updateReading(reading, updatedReading) {
+  //   reading.title = updatedReading.title;
+  //   reading.artist = updatedReading.artist;
+  //   reading.duration = updatedReading.duration;
+  //   await db.write();
   // },
+  
+
+  
+  
 };
