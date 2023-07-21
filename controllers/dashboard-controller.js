@@ -1,12 +1,18 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
+import { stationConversions } from "../utils/conversions.js";
+import { stationAnalytics } from "../utils/analytics.js";
 
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
+    const stations = await stationStore.getStationsByUserId(loggedInUser._id);
+
+    
+    
     const viewData = {
       title: "Station Dashboard",
-      stations: await stationStore.getStationsByUserId(loggedInUser._id),
+      stations: stations,
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);

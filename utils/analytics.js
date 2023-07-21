@@ -1,4 +1,12 @@
+import { stationStore } from "../models/station-store.js";
+
 export const stationAnalytics = {
+  
+  // updateWeather(stationID) {
+  //     let latestReading = stationStore.getLatestReading(stationID);
+  //   let station = stationStore.getStationById(stationID)
+  //     station.temperature = latestReading.temperature;
+  // },
 
   getMaxTemperature(station) {
     let maxTempReading = null;

@@ -7,7 +7,7 @@ export const stationConversions = {
    convertWeatherCodes(code) {
      let weatherDescription = null;
             switch (code) {
-                case "100":
+                case 100:
                     weatherDescription = "Clear";
                     break;
                 case 200:

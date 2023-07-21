@@ -1,6 +1,9 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 import { readingStore } from "./reading-store.js";
+import { stationAnalytics } from "../utils/analytics.js";
+import { stationController } from "../controllers/station-controller.js";
+
 
 const db = initStore("stations");
 
@@ -48,4 +51,35 @@ export const stationStore = {
     await db.read();
     return db.data.stations.filter((station) => station.userid === userid);
   },
+  
+  //   async updateStationWeather(id) {
+  //   stationAnalytics.updateWeather(id);
+  //   await db.write();
+  // },
+  
+  
+    async updateStation(station, updatedStation) {
+    station.title = updatedStation.title;
+    station.latitude = updatedStation.latitude;
+    station.longitude = updatedStation.longitude;
+    station.userid = updatedStation.userid;
+    station.latestWeatherDescription = updatedStation.latestWeatherDescription;
+    station.latestTempC = updatedStation.latestTempC;
+    station.latestTempF = updatedStation.latestTempF;
+    station.latestBFT = updatedStation.latestBFT;
+    station.latestCompassDirection = updatedStation.latestCompassDirection;
+    station.latestWindChill = updatedStation.latestWindChill;
+    station.latestPressure = updatedStation.latestPressure;
+    station.maxTemperature = updatedStation.maxTemperature;
+    station.minTemperature = updatedStation.minTemperature;
+    station.maxWindSpeed = updatedStation.maxWindSpeed;
+    station.minWindSpeed = updatedStation.minWindSpeed;
+    station.maxPressure = updatedStation.maxPressure;
+    station.minPressure = updatedStation.minPressure;
+
+      
+    await db.write();
+  },
+  
+  
 };

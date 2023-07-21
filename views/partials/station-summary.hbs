@@ -2,22 +2,18 @@
   <div class="columns is-multiline">
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
-      <h2 class="title has-text-white">{{station.title}}</h2>
+      <h2 class="title has-text-white">{{title}}</h2>
       <br>
-      Lat: {{station.latitude}}
+      Lat: {{latitude}}
       <br>
-      Lng: {{station.longitude}}
-      <br>
-      <br>
-      <br>
-      <br>
+      Lng: {{longitude}}
     </div>
   </div>
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
       <h2 class="title has-text-white">Weather</h2>
-      {{latestReading.weatherDescription}}
       <br>
+      {{latestWeatherDescription}}
       <br>
       <br>
       <br>
@@ -28,9 +24,12 @@
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
       <h2 class="title has-text-white">Temp</h2>
-      {{latestReading.temperature}} C
       <br>
-      {{latestReading.temperatureFahrenheit}} F
+      {{latestTempC}} C
+      <br>
+      {{latestTempF}} F
+      <br>
+      <br>
       <br>
       Max: {{maxTemperature}}
       <br>
@@ -43,13 +42,13 @@
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
       <h2 class="title has-text-white">Wind</h2>
-      {{latestReading.windBeaufort}} BFT
+      {{latestBFT}} BFT
       <br>
-      {{latestReading.compassDirection}}
+      {{latestCompassDirection}}
       <br>
       Feels Like
       <br>
-      {{latestReading.windChill}}
+      {{latestWindChill}}
       <br>
       Max: {{maxWindSpeed}}
       <br>
@@ -59,7 +58,7 @@
   <div class="column is-one-fifth">
     <div class="box has-background-black has-text-white">
       <h2 class="title has-text-white">Pressure</h2>
-      {{latestReading.pressure}} hpa
+      {{latestPressure}} hpa
       <br>
       Max: {{maxPressure}}
       <br>
