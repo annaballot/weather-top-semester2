@@ -76,6 +76,7 @@ export const stationStore = {
     station.minWindSpeed = updatedStation.minWindSpeed;
     station.maxPressure = updatedStation.maxPressure;
     station.minPressure = updatedStation.minPressure;
+    station.pressureTrend = updatedStation.pressureTrend;
 
       
     await db.write();
