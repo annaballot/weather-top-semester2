@@ -27,8 +27,10 @@ export const stationController = {
     const minWindSpeed = await station.minWindSpeed;
     const maxPressure = await station.maxPressure;
     const minPressure = await station.minPressure;
+    const temperatureTrend = await station.temperatureTrend;
+    const windSpeedTrend = await station.windSpeedTrend;
     const pressureTrend = await station.pressureTrend;
-
+    
     console.log(
       `station.latestWeatherDescription ${station.latestWeatherDescription}`
     );
@@ -52,6 +54,8 @@ export const stationController = {
       minWindSpeed: minWindSpeed,
       maxPressure: maxPressure,
       minPressure: minPressure,
+      temperatureTrend: temperatureTrend,
+      windSpeedTrend: windSpeedTrend,
       pressureTrend: pressureTrend,
     };
     response.render("station-view", viewData);
@@ -89,6 +93,8 @@ export const stationController = {
     const latestCompassDirection = await stationConversions.convertWindDirection(latestReading.windDirection);
     const latestWindChill = await stationConversions.calculateWindChill(latestReading.temperature,latestReading.windSpeed);
     const pressureTrend = await stationTrends.pressureTrend(station);
+    const temperatureTrend = await stationTrends.temperatureTrend(station);
+    const windSpeedTrend = await stationTrends.windSpeedTrend(station);
     
     const updatedStation = {
       title: station.title,
@@ -108,6 +114,8 @@ export const stationController = {
       minWindSpeed: minWindSpeed,
       maxPressure: maxPressure,
       minPressure: minPressure,
+      temperatureTrend: temperatureTrend,
+      windSpeedTrend: windSpeedTrend,
       pressureTrend: pressureTrend,
     };
 
