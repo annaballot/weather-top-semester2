@@ -49,4 +49,5 @@ export const accountsController = {
     const userEmail = request.cookies.playlist;
     return await userStore.getUserByEmail(userEmail);
   },
+  
 };

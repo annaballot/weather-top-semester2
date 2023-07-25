@@ -196,6 +196,13 @@
       "pressureTrend": -1,
       "temperatureTrend": -1,
       "windSpeedTrend": 1
+    },
+    {
+      "title": "Clonea",
+      "latitude": 15,
+      "longitude": 29,
+      "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
+      "_id": "dd04b759-15ea-4509-8757-5cbf5e21767e"
     }
   ]
 }

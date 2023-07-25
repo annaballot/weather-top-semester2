@@ -1,0 +1,49 @@
+<section class="content box">
+  <div class="columns">
+    <div class="column is-half">
+      <figure class="image">
+        <img src="/public/images/weather-icons-set.jpg" alt="Set of Weather Icons" title="Set of Weather Icons">
+        <a href="https://www.freepik.com/free-vector/weather-icons-collection_972339.htm#query=weather%20icons&position=2&from_view=search&track=ais">Image
+          by anindyanfitri</a> on Freepik
+      </figure>
+    </div>
+    <div class="column is-half">
+      <div class="content box">
+        <form action="/updateaccount" method="POST">
+          <h3 class="subtitle">Update Your Account Details</h3>
+          <div class="field">
+            <label class="label">Email</label>
+            <p class="control">
+              <input class="input is-static" value="{{email}}" type="email" name="email" readonly>
+            </p>
+          </div>
+          <div class="field is-horizontal field-body">
+            <div class="field">
+              <label class="label">First Name</label>
+              <p class="control is-expanded">
+                <input class="input" type="text" value="{{firstName}}" name="firstname">
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Last Name</label>
+              <p class="control">
+                <input class="input" type="text" value="{{lastName}}" name="lastname">
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Password</label>
+            <p class="control has-icons-left">
+              <input class="input" value="{{password}}" type="password" name="password">
+              <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+            </p>
+          </div>
+          <button class="button is-link is-info">Submit</button>
+        </form>
+        <br>
+        <i>Note: You cannot update your email address</i>
+      </div>
+    </div>
+  </div>
+</section>
