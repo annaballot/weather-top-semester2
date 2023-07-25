@@ -1,13 +1,6 @@
 import { stationStore } from "../models/station-store.js";
 
 export const stationAnalytics = {
-  
-  // updateWeather(stationID) {
-  //     let latestReading = stationStore.getLatestReading(stationID);
-  //   let station = stationStore.getStationById(stationID)
-  //     station.temperature = latestReading.temperature;
-  // },
-
   getMaxTemperature(station) {
     let maxTempReading = null;
     if (station.readings.length > 0) {
@@ -22,7 +15,7 @@ export const stationAnalytics = {
       return 0;
     }
   },
-  
+
   getMinTemperature(station) {
     let minTempReading = null;
     if (station.readings.length > 0) {
@@ -37,9 +30,8 @@ export const stationAnalytics = {
       return 0;
     }
   },
-  
-  
-    getMaxWindSpeed(station) {
+
+  getMaxWindSpeed(station) {
     let maxWindSpeedReading = null;
     if (station.readings.length > 0) {
       maxWindSpeedReading = station.readings[0];
@@ -53,7 +45,7 @@ export const stationAnalytics = {
       return 0;
     }
   },
-  
+
   getMinWindSpeed(station) {
     let minWindSpeedReading = null;
     if (station.readings.length > 0) {
@@ -68,8 +60,8 @@ export const stationAnalytics = {
       return 0;
     }
   },
-  
-    getMaxPressure(station) {
+
+  getMaxPressure(station) {
     let maxPressure = null;
     if (station.readings.length > 0) {
       maxPressure = station.readings[0];
@@ -83,7 +75,7 @@ export const stationAnalytics = {
       return 0;
     }
   },
-  
+
   getMinPressure(station) {
     let minPressure = null;
     if (station.readings.length > 0) {
@@ -98,5 +90,4 @@ export const stationAnalytics = {
       return 0;
     }
   },
-
 };
