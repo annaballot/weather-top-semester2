@@ -18,6 +18,7 @@ router.post("/dashboard/addstation", dashboardController.addStation);
 router.get("/station/:id", stationController.index);
 router.post("/station/:id/addreading", stationController.addReading);
 router.get("/about", aboutController.index);
-router.get("/updateAccount", userController.index);
+router.get("/myAccount", userController.index);
+router.post("/updateAccount", userController.updateAccountDetails);
 
 
