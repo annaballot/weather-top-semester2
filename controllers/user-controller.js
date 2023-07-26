@@ -26,56 +26,20 @@ export const userController = {
   },
   
   
-
-//   login(request, response) {
-//     const viewData = {
-//       title: "Login to the Service",
-//     };
-//     response.render("login-view", viewData);
-//   },
-
-//   logout(request, response) {
-//     response.cookie("playlist", "");
-//     response.redirect("/");
-//   },
-
-//   signup(request, response) {
-//     const viewData = {
-//       title: "Login to the Service",
-//     };
-//     response.render("signup-view", viewData);
-//   },
-
-//   async register(request, response) {
-//     const user = request.body;
-//     await userStore.addUser(user);
-//     console.log(`registering ${user.email}`);
-//     response.redirect("/");
-//   },
-
-//   async authenticate(request, response) {
-//     const user = await userStore.getUserByEmail(request.body.email);
-//     if (user) {
-//       response.cookie("playlist", user.email);
-//       console.log(`logging in ${user.email}`);
-//       response.redirect("/dashboard");
-//     } else {
-//       response.redirect("/login");
-//     }
-//   },
-
-//   async getLoggedInUser(request) {
-//     const userEmail = request.cookies.playlist;
-//     return await userStore.getUserByEmail(userEmail);
-//   },
   
-//     async updateAccount(request, response) {
+  async updateAccountDetails(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     
-//     const viewData = {
-//       title: "User Update Dashboard",
-//     };
-//     console.log("dashboard rendering");
-//       response.render("user-view", viewData);
-    
-//   },
+    const updatedUser = {
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
+      email: request.body.email,
+      password: request.body.password,
+    };
+
+    console.log(updatedUser);
+
+    await userStore.updateUserDetails(loggedInUser, updatedUser);
+    response.redirect("/myAccount");
+  },
 };
