@@ -122,4 +122,13 @@ export const stationController = {
     await stationStore.updateStation(station, updatedStation);
     response.redirect("/station/" + station._id);
   },
+  
+  
+  //   public static List<Station> sortStations(List<Station> station) {
+  //   station.sort(Comparator.comparing(Station::getName, String.CASE_INSENSITIVE_ORDER));
+  //   Logger.info("Sorting Stations Alphabetically by Name");
+  //   return station;
+  // }
+
+
 };

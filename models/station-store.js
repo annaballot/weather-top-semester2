@@ -49,7 +49,7 @@ export const stationStore = {
   
   async getStationsByUserId(userid) {
     await db.read();
-    return db.data.stations.filter((station) => station.userid === userid);
+    return db.data.stations.filter((station) => station.userid === userid)
   },
   
   //   async updateStationWeather(id) {
@@ -83,5 +83,11 @@ export const stationStore = {
     await db.write();
   },
   
+
+  
+  async sortStations(stations) {
+    //sorts stations alphabetically by title, ignoring the case
+    return stations.sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1);
+  },
   
 };

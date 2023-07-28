@@ -6,9 +6,8 @@ import { stationAnalytics } from "../utils/analytics.js";
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
-    const stations = await stationStore.getStationsByUserId(loggedInUser._id);
-
-    
+    const unsortedStations = await stationStore.getStationsByUserId(loggedInUser._id);
+    const stations = await stationStore.sortStations(unsortedStations);
     
     const viewData = {
       title: "Station Dashboard",
