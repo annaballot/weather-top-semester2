@@ -171,6 +171,26 @@
       "pressure": 980,
       "_id": "e15c4895-9239-4f1f-bd04-58e9bcd269b5",
       "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+    },
+    {
+      "submittedDate": "2023-07-31T13:24:23.601Z",
+      "code": 100,
+      "temperature": 1,
+      "windSpeed": 2,
+      "windDirection": 1,
+      "pressure": 1000,
+      "_id": "76eaf9e3-9933-44d1-a0bb-8abd97afb0c7",
+      "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+    },
+    {
+      "submittedDate": "2023-07-31T13:26:37.238Z",
+      "code": 100,
+      "temperature": 4,
+      "windSpeed": 4,
+      "windDirection": 4,
+      "pressure": 1000,
+      "_id": "d0db9124-7c73-4eed-8d07-a288bd61cbd9",
+      "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
     }
   ]
 }
