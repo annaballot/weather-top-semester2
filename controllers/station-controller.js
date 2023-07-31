@@ -3,6 +3,7 @@ import { readingStore } from "../models/reading-store.js";
 import { stationConversions } from "../utils/conversions.js";
 import { stationAnalytics } from "../utils/analytics.js";
 import { stationTrends } from "../utils/trends.js";
+import { dateTimeHelpers } from "../utils/date-time.js";
 
 export const stationController = {
   async index(request, response) {
@@ -63,7 +64,9 @@ export const stationController = {
 
   async addReading(request, response) {
     let station = await stationStore.getStationById(request.params.id);
+    let submittedDate = await dateTimeHelpers.getCurrentDate();
     const newReading = {
+      submittedDate: submittedDate,
       code: Number(request.body.code),
       temperature: Number(request.body.temperature),
       windSpeed: Number(request.body.windSpeed),
@@ -130,5 +133,13 @@ export const stationController = {
   //   return station;
   // }
 
+  
+  async deleteReading(request, response) {
+    const stationId = request.params.stationid;
+    const readingId = request.params.readingid;
+    console.log(`Deleting Reading ${readingId} from Station ${stationId}`);
+    await readingStore.deleteReading(readingId);
+    response.redirect("/station/" + stationId);
+  },
 
 };

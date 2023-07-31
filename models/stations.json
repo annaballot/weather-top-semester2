@@ -205,25 +205,79 @@
       "_id": "dd04b759-15ea-4509-8757-5cbf5e21767e"
     },
     {
-      "title": "Ardmore",
-      "latitude": 3,
-      "longitude": 19,
-      "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
-      "_id": "5b26cf3f-8fb9-49f2-8cc8-4d9e9d12a3bd"
-    },
-    {
-      "title": "zebra",
-      "latitude": 16,
-      "longitude": 5,
-      "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
-      "_id": "7a32196e-7d5f-4286-ab21-d691ccb5cf9d"
-    },
-    {
       "title": "Achill",
       "latitude": 0,
       "longitude": 1,
       "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
-      "_id": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+      "_id": "230d3f92-dcea-4409-8d09-ff26b63c8add",
+      "readings": [
+        {
+          "submittedDate": "2023-07-31T13:24:04.379Z",
+          "code": 100,
+          "temperature": 1,
+          "windSpeed": 1,
+          "windDirection": 1,
+          "pressure": 1000,
+          "_id": "a940ecd8-9766-488d-9e85-86f7ff66892e",
+          "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+        },
+        {
+          "submittedDate": "2023-07-31T13:24:23.601Z",
+          "code": 100,
+          "temperature": 1,
+          "windSpeed": 2,
+          "windDirection": 1,
+          "pressure": 1000,
+          "_id": "76eaf9e3-9933-44d1-a0bb-8abd97afb0c7",
+          "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+        },
+        {
+          "submittedDate": "2023-07-31T13:26:24.940Z",
+          "code": 100,
+          "temperature": 2,
+          "windSpeed": 2,
+          "windDirection": 2,
+          "pressure": 1000,
+          "_id": "f0a5ffd6-9b32-4c02-9458-16e8d79905ce",
+          "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+        },
+        {
+          "submittedDate": "2023-07-31T13:26:32.044Z",
+          "code": 100,
+          "temperature": 3,
+          "windSpeed": 3,
+          "windDirection": 3,
+          "pressure": 1000,
+          "_id": "b66e7cd0-0414-4e45-b619-7a5c30fb5425",
+          "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+        },
+        {
+          "submittedDate": "2023-07-31T13:26:37.238Z",
+          "code": 100,
+          "temperature": 4,
+          "windSpeed": 4,
+          "windDirection": 4,
+          "pressure": 1000,
+          "_id": "d0db9124-7c73-4eed-8d07-a288bd61cbd9",
+          "stationid": "230d3f92-dcea-4409-8d09-ff26b63c8add"
+        }
+      ],
+      "latestWeatherDescription": "Clear",
+      "latestTempC": 4,
+      "latestTempF": 39.2,
+      "latestBFT": 1,
+      "latestCompassDirection": "North",
+      "latestWindChill": 3.4,
+      "latestPressure": 1000,
+      "maxTemperature": 4,
+      "minTemperature": 1,
+      "maxWindSpeed": 4,
+      "minWindSpeed": 1,
+      "maxPressure": 1000,
+      "minPressure": 1000,
+      "temperatureTrend": 1,
+      "windSpeedTrend": 1,
+      "pressureTrend": 0
     },
     {
       "title": "Bray",
