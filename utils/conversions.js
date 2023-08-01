@@ -118,5 +118,37 @@ export const stationConversions = {
         }
         return compassDirection;
     },
+  
+ convertAPIWeatherCodes(code) {
+    let updatedCode = 0;
+    if (code > 199 && code < 300) {
+      updatedCode = 800;
+    }
+    else if (code > 299 && code < 400) {
+      updatedCode = 400;
+    }
+    else if (code > 499 && code < 600) {
+      updatedCode = 500;
+    }
+    else if (code > 599 && code < 700) {
+      updatedCode = 700;
+    }
+    else if ((code == 800)) {
+      updatedCode = 100;
+    }
+    else if ((code == 801)) {
+      updatedCode = 200;
+    }
+    else if ((code == 802)) {
+      updatedCode = 200;
+    }
+    else if ((code == 803)) {
+      updatedCode = 300;
+    }
+    else if ((code == 804)) {
+      updatedCode = 300;
+    }
+    return updatedCode;
+  },
 
 };

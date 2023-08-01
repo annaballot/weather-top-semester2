@@ -22,5 +22,5 @@ router.post("/station/:id/addreading", stationController.addReading);
 router.get("/about", aboutController.index);
 router.get("/myAccount", userController.index);
 router.post("/updateAccount", userController.updateAccountDetails);
-
+router.post("/station/:id/addreadingapi", stationController.addReadingAPI);
 
