@@ -12,15 +12,6 @@
           "code": 100,
           "temperature": 10,
           "windSpeed": 15,
-          "windDirection": 90,
-          "pressure": 990,
-          "_id": "1cc2e455-0b94-4192-ba4a-2b1fdb610ac3",
-          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
-        },
-        {
-          "code": 100,
-          "temperature": 10,
-          "windSpeed": 15,
           "windDirection": 45,
           "pressure": 1000,
           "_id": "4c6ad807-e0fd-4939-9135-6e2f8ff7cc0f",
@@ -160,15 +151,265 @@
           "pressure": 990,
           "_id": "f8434743-b2e4-4864-a4b2-1e4d2cd001a9",
           "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T16:51:36.579Z",
+          "code": 804,
+          "temperature": 16.76,
+          "windSpeed": 4.47,
+          "pressure": 995,
+          "windDirection": 309,
+          "_id": "a80b6d74-470b-4a97-a982-ed4f833fa8f8",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T17:16:58.959Z",
+          "code": 804,
+          "temperature": 16.68,
+          "windSpeed": 4.47,
+          "pressure": 996,
+          "windDirection": 313,
+          "tempTrend": [
+            15.36,
+            17.03,
+            16.73,
+            17.64,
+            17.01,
+            16.21,
+            16.17,
+            16.31
+          ],
+          "trendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "1006be66-3bbb-4ae5-933c-fa422a35918f",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T17:18:56.299Z",
+          "code": 804,
+          "temperature": 16.68,
+          "windSpeed": 4.47,
+          "pressure": 996,
+          "windDirection": 313,
+          "tempTrend": [
+            15.36,
+            17.03,
+            16.73,
+            17.64,
+            17.01,
+            16.21,
+            16.17,
+            16.31
+          ],
+          "trendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "e9e589ab-ec0f-43f4-b8aa-5d1b8d9fbd59",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T17:19:25.534Z",
+          "code": 804,
+          "temperature": 16.68,
+          "windSpeed": 4.47,
+          "pressure": 996,
+          "windDirection": 313,
+          "tempTrend": [
+            15.36,
+            17.03,
+            16.73,
+            17.64,
+            17.01,
+            16.21,
+            16.17,
+            16.31
+          ],
+          "trendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "76f5ce0d-857b-4878-b9c1-5875d8d8c2aa",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T17:35:03.481Z",
+          "code": 804,
+          "temperature": 16.13,
+          "windSpeed": 3.13,
+          "pressure": 996,
+          "windDirection": 329,
+          "tempTrend": [
+            15.36,
+            17.03,
+            16.73,
+            17.64,
+            17.01,
+            16.21,
+            16.17,
+            16.31
+          ],
+          "trendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "c8b8a808-c309-4685-beec-55c53978b435",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T17:36:40.846Z",
+          "code": 804,
+          "temperature": 16.13,
+          "windSpeed": 3.13,
+          "pressure": 996,
+          "windDirection": 328,
+          "tempTrend": [
+            15.36,
+            17.03,
+            16.73,
+            17.64,
+            17.01,
+            16.21,
+            16.17,
+            16.31
+          ],
+          "trendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "c6cc0f2c-c2c3-4fcc-9ff9-23c01bf93597",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T18:08:03.461Z",
+          "code": 804,
+          "temperature": 15.89,
+          "windSpeed": 2.68,
+          "pressure": 997,
+          "windDirection": 323,
+          "apiTempTrend": [
+            15.32,
+            17.32,
+            16.63,
+            16.81,
+            17.52,
+            12.78,
+            16.68,
+            13.88
+          ],
+          "apiTrendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "af489160-4603-4b14-868a-09b6e72fc49a",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T18:10:26.221Z",
+          "code": 804,
+          "temperature": 15.89,
+          "windSpeed": 2.68,
+          "pressure": 997,
+          "windDirection": 323,
+          "apiTempTrend": [
+            15.32,
+            17.32,
+            16.63,
+            16.81,
+            17.52,
+            12.78,
+            16.68,
+            13.88
+          ],
+          "apiTrendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "09e90d67-1990-4308-b086-a7c70ef96d24",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-02T18:12:28.708Z",
+          "code": 804,
+          "temperature": 15.89,
+          "windSpeed": 2.68,
+          "pressure": 997,
+          "windDirection": 323,
+          "apiTempTrend": [
+            15.32,
+            17.32,
+            16.63,
+            16.81,
+            17.52,
+            12.78,
+            16.68,
+            13.88
+          ],
+          "apiTrendLabels": [
+            "2/7/2023",
+            "3/7/2023",
+            "4/7/2023",
+            "5/7/2023",
+            "6/7/2023",
+            "7/7/2023",
+            "8/7/2023",
+            "9/7/2023"
+          ],
+          "_id": "af66c57e-6f6d-4eda-ba78-4dc023d7287f",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
         }
       ],
-      "latestWeatherDescription": "Clear",
-      "latestTempC": 20,
-      "latestTempF": 68,
-      "latestBFT": 4,
-      "latestCompassDirection": "North",
-      "latestWindChill": 20,
-      "latestPressure": 990,
+      "latestWeatherDescription": null,
+      "latestTempC": 15.89,
+      "latestTempF": 60.602000000000004,
+      "latestBFT": 1,
+      "latestCompassDirection": "North-West",
+      "latestWindChill": 17.1,
+      "latestPressure": 997,
       "maxTemperature": 25,
       "minTemperature": 1,
       "maxWindSpeed": 32,
@@ -177,7 +418,27 @@
       "minPressure": 990,
       "pressureTrend": 0,
       "temperatureTrend": 0,
-      "windSpeedTrend": 0
+      "windSpeedTrend": 0,
+      "apiTempTrend": [
+        15.32,
+        17.32,
+        16.63,
+        16.81,
+        17.52,
+        12.78,
+        16.68,
+        13.88
+      ],
+      "apiTrendLabels": [
+        "2/7/2023",
+        "3/7/2023",
+        "4/7/2023",
+        "5/7/2023",
+        "6/7/2023",
+        "7/7/2023",
+        "8/7/2023",
+        "9/7/2023"
+      ]
     },
     {
       "title": "Andorra",

@@ -115,7 +115,9 @@ export const stationAnalytics = {
     const pressureTrend = await stationTrends.pressureTrend(station);
     const temperatureTrend = await stationTrends.temperatureTrend(station);
     const windSpeedTrend = await stationTrends.windSpeedTrend(station);
-    
+    const apiTempTrend = await latestReading.apiTempTrend;
+    const apiTrendLabels = await latestReading.apiTrendLabels;
+     
     const updatedStation = {
       title: station.title,
       latitude: station.latitude,
@@ -137,6 +139,9 @@ export const stationAnalytics = {
       temperatureTrend: temperatureTrend,
       windSpeedTrend: windSpeedTrend,
       pressureTrend: pressureTrend,
+      apiTempTrend: apiTempTrend,
+      apiTrendLabels: apiTrendLabels,
+      
     };
 
     await stationStore.updateStation(station, updatedStation);
