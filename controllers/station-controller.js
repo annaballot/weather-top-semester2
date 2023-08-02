@@ -7,11 +7,10 @@ import { stationAnalytics } from "../utils/analytics.js";
 import { stationTrends } from "../utils/trends.js";
 import { dateTimeHelpers } from "../utils/date-time.js";
 
-
 export const stationController = {
-    /***********************************************************************************************************************************************************************************
-  ************************************************************************************************************************************************************************************/
-  
+  /***********************************************************************************************************************************************************************************
+   ************************************************************************************************************************************************************************************/
+
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
 
@@ -37,7 +36,7 @@ export const stationController = {
     const temperatureTrend = await station.temperatureTrend;
     const windSpeedTrend = await station.windSpeedTrend;
     const pressureTrend = await station.pressureTrend;
-    
+
     console.log(
       `station.latestWeatherDescription ${station.latestWeatherDescription}`
     );
@@ -67,97 +66,36 @@ export const stationController = {
     };
     response.render("station-view", viewData);
   },
-  
-  /***********************************************************************************************************************************************************************************
-  ************************************************************************************************************************************************************************************/
 
-  
-  
-  
-  
-  
+  /***********************************************************************************************************************************************************************************
+   ************************************************************************************************************************************************************************************/
+
   async addReadingAPI(request, response) {
     let station = await stationStore.getStationById(request.params.id);
     let submittedDate = await dateTimeHelpers.getCurrentDate();
     console.log("rendering new report");
     const lat = station.latitude;
     const lng = station.longitude;
-    const oneCallRequest = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&units=metric&&appid=b64b22cb633461dbbcaff5f9f58b837d`
+    const oneCallRequest = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&units=metric&&appid=b64b22cb633461dbbcaff5f9f58b837d`;
     let newReading = {};
     const result = await axios.get(oneCallRequest);
-    
-        if (result.status == 200) {
+
+    if (result.status == 200) {
       const APIreading = result.data.current;
-          newReading.submittedDate = submittedDate;
-      newReading.code = stationConversions.convertAPIWeatherCodes(APIreading.weather[0].id);
+      newReading.submittedDate = submittedDate;
+      newReading.code = APIreading.weather[0].id;
       newReading.temperature = APIreading.temp;
       newReading.windSpeed = APIreading.wind_speed;
       newReading.pressure = APIreading.pressure;
       newReading.windDirection = APIreading.wind_deg;
     }
     console.log(newReading);
-       
-    
+
     await readingStore.addReading(station._id, newReading);
-
-    
-    /**************************************************************
-    Update the staion model with all the trends latest readings 
-    after the new reading has been added
-    **************************************************************/
-    const latestReading = await stationStore.getLatestReading(request.params.id);
-    station = await stationStore.getStationById(request.params.id); // update station after new reading has been added
-    const maxTemperature = await stationAnalytics.getMaxTemperature(station);
-    const minTemperature = await stationAnalytics.getMinTemperature(station);
-    const maxWindSpeed = await stationAnalytics.getMaxWindSpeed(station);
-    const minWindSpeed = await stationAnalytics.getMinWindSpeed(station);
-    const maxPressure = await stationAnalytics.getMaxPressure(station);
-    const minPressure = await stationAnalytics.getMinPressure(station);
-    const latestWeatherDescription = await stationConversions.convertWeatherCodes(latestReading.code);
-    const latestTempC = await latestReading.temperature;
-    const latestTempF = await stationConversions.convertTempToFahrenheit(latestReading.temperature);
-    const latestBFT = await stationConversions.convertBeaufort(latestReading.windSpeed);
-    const latestCompassDirection = await stationConversions.convertWindDirection(latestReading.windDirection);
-    const latestWindChill = await stationConversions.calculateWindChill(latestReading.temperature,latestReading.windSpeed);
-    const pressureTrend = await stationTrends.pressureTrend(station);
-    const temperatureTrend = await stationTrends.temperatureTrend(station);
-    const windSpeedTrend = await stationTrends.windSpeedTrend(station);
-    
-    const updatedStation = {
-      title: station.title,
-      latitude: station.latitude,
-      longitude: station.longitude,
-      userid: station.userid,
-      latestWeatherDescription: latestWeatherDescription,
-      latestTempC: latestTempC,
-      latestTempF: latestTempF,
-      latestBFT: latestBFT,
-      latestCompassDirection: latestCompassDirection,
-      latestWindChill: latestWindChill,
-      latestPressure: latestReading.pressure,
-      maxTemperature: maxTemperature,
-      minTemperature: minTemperature,
-      maxWindSpeed: maxWindSpeed,
-      minWindSpeed: minWindSpeed,
-      maxPressure: maxPressure,
-      minPressure: minPressure,
-      temperatureTrend: temperatureTrend,
-      windSpeedTrend: windSpeedTrend,
-      pressureTrend: pressureTrend,
-    };
-
-    await stationStore.updateStation(station, updatedStation);
+    await stationAnalytics.updateStationSummary(request.params.id);
     response.redirect("/station/" + station._id);
   },
-  
-  
-  //   public static List<Station> sortStations(List<Station> station) {
-  //   station.sort(Comparator.comparing(Station::getName, String.CASE_INSENSITIVE_ORDER));
-  //   Logger.info("Sorting Stations Alphabetically by Name");
-  //   return station;
-  // }
 
-  
   async addReading(request, response) {
     let station = await stationStore.getStationById(request.params.id);
     let submittedDate = await dateTimeHelpers.getCurrentDate();
@@ -172,68 +110,16 @@ export const stationController = {
 
     await readingStore.addReading(station._id, newReading);
 
-    
-    /**************************************************************
-    Update the staion model with all the trends latest readings 
-    after the new reading has been added
-    **************************************************************/
-    const latestReading = await stationStore.getLatestReading(request.params.id);
-    station = await stationStore.getStationById(request.params.id); // update station after new reading has been added
-    const maxTemperature = await stationAnalytics.getMaxTemperature(station);
-    const minTemperature = await stationAnalytics.getMinTemperature(station);
-    const maxWindSpeed = await stationAnalytics.getMaxWindSpeed(station);
-    const minWindSpeed = await stationAnalytics.getMinWindSpeed(station);
-    const maxPressure = await stationAnalytics.getMaxPressure(station);
-    const minPressure = await stationAnalytics.getMinPressure(station);
-    const latestWeatherDescription = await stationConversions.convertWeatherCodes(latestReading.code);
-    const latestTempC = await latestReading.temperature;
-    const latestTempF = await stationConversions.convertTempToFahrenheit(latestReading.temperature);
-    const latestBFT = await stationConversions.convertBeaufort(latestReading.windSpeed);
-    const latestCompassDirection = await stationConversions.convertWindDirection(latestReading.windDirection);
-    const latestWindChill = await stationConversions.calculateWindChill(latestReading.temperature,latestReading.windSpeed);
-    const pressureTrend = await stationTrends.pressureTrend(station);
-    const temperatureTrend = await stationTrends.temperatureTrend(station);
-    const windSpeedTrend = await stationTrends.windSpeedTrend(station);
-    
-    const updatedStation = {
-      title: station.title,
-      latitude: station.latitude,
-      longitude: station.longitude,
-      userid: station.userid,
-      latestWeatherDescription: latestWeatherDescription,
-      latestTempC: latestTempC,
-      latestTempF: latestTempF,
-      latestBFT: latestBFT,
-      latestCompassDirection: latestCompassDirection,
-      latestWindChill: latestWindChill,
-      latestPressure: latestReading.pressure,
-      maxTemperature: maxTemperature,
-      minTemperature: minTemperature,
-      maxWindSpeed: maxWindSpeed,
-      minWindSpeed: minWindSpeed,
-      maxPressure: maxPressure,
-      minPressure: minPressure,
-      temperatureTrend: temperatureTrend,
-      windSpeedTrend: windSpeedTrend,
-      pressureTrend: pressureTrend,
-    };
-
-    await stationStore.updateStation(station, updatedStation);
+    await stationAnalytics.updateStationSummary(request.params.id);
     response.redirect("/station/" + station._id);
   },
-  
-  
-  
+
   async deleteReading(request, response) {
     const stationId = request.params.stationid;
     const readingId = request.params.readingid;
     console.log(`Deleting Reading ${readingId} from Station ${stationId}`);
     await readingStore.deleteReading(readingId);
+    await stationAnalytics.updateStationSummary(stationId);
     response.redirect("/station/" + stationId);
   },
-  
-  
-  
-  
-
 };
