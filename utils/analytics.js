@@ -1,4 +1,6 @@
 import { stationStore } from "../models/station-store.js";
+import { stationConversions } from "./conversions.js";
+import { stationTrends } from "./trends.js";
 
 export const stationAnalytics = {
   getMaxTemperature(station) {
@@ -89,5 +91,54 @@ export const stationAnalytics = {
     } else {
       return 0;
     }
+  },
+  
+  async updateStationSummary(id) {
+   /**************************************************************
+    Update the staion model with all the trends latest readings 
+    after the new reading has been added
+    **************************************************************/
+    const latestReading = await stationStore.getLatestReading(id);
+    const station = await stationStore.getStationById(id); // update station after new reading has been added
+    const maxTemperature = await stationAnalytics.getMaxTemperature(station);
+    const minTemperature = await stationAnalytics.getMinTemperature(station);
+    const maxWindSpeed = await stationAnalytics.getMaxWindSpeed(station);
+    const minWindSpeed = await stationAnalytics.getMinWindSpeed(station);
+    const maxPressure = await stationAnalytics.getMaxPressure(station);
+    const minPressure = await stationAnalytics.getMinPressure(station);
+    const latestWeatherDescription = await stationConversions.convertWeatherCodes(latestReading.code);
+    const latestTempC = await latestReading.temperature;
+    const latestTempF = await stationConversions.convertTempToFahrenheit(latestReading.temperature);
+    const latestBFT = await stationConversions.convertBeaufort(latestReading.windSpeed);
+    const latestCompassDirection = await stationConversions.convertWindDirection(latestReading.windDirection);
+    const latestWindChill = await stationConversions.calculateWindChill(latestReading.temperature,latestReading.windSpeed);
+    const pressureTrend = await stationTrends.pressureTrend(station);
+    const temperatureTrend = await stationTrends.temperatureTrend(station);
+    const windSpeedTrend = await stationTrends.windSpeedTrend(station);
+    
+    const updatedStation = {
+      title: station.title,
+      latitude: station.latitude,
+      longitude: station.longitude,
+      userid: station.userid,
+      latestWeatherDescription: latestWeatherDescription,
+      latestTempC: latestTempC,
+      latestTempF: latestTempF,
+      latestBFT: latestBFT,
+      latestCompassDirection: latestCompassDirection,
+      latestWindChill: latestWindChill,
+      latestPressure: latestReading.pressure,
+      maxTemperature: maxTemperature,
+      minTemperature: minTemperature,
+      maxWindSpeed: maxWindSpeed,
+      minWindSpeed: minWindSpeed,
+      maxPressure: maxPressure,
+      minPressure: minPressure,
+      temperatureTrend: temperatureTrend,
+      windSpeedTrend: windSpeedTrend,
+      pressureTrend: pressureTrend,
+    };
+
+    await stationStore.updateStation(station, updatedStation);
   },
 };
