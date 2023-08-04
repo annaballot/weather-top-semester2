@@ -85,6 +85,7 @@ export const stationController = {
     const result = await axios.get(oneCallRequest);
 
     if (result.status == 200) {
+      console.log(`API DATA AB`);
         console.log(result.data);
       const APIreading = result.data.current;
       newReading.submittedDate = submittedDate;
@@ -99,8 +100,8 @@ export const stationController = {
       const trends = result.data.daily;
       for (let i=0; i<trends.length; i++) {
         newReading.apiTempTrend.push(trends[i].temp.day);
-        const date = new Date(trends[i].dt * 1000);
-        newReading.apiTrendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+        const date = new Date(trends[i].dt*1000).toLocaleDateString("en-uk");
+        newReading.apiTrendLabels.push(`${date}`);
       }
     }
     console.log(newReading);

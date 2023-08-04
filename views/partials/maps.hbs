@@ -1,0 +1,26 @@
+<div class="content box">
+
+  <div id="map">
+  </div>
+  <script>
+    const map = L.map('map').setView([53.3498, -6.2603], 3);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19,
+    attribution: '© OpenStreetMap' }).addTo(map);
+    
+     let marker, popup;
+    {{#each stations}}
+   
+       marker = L.marker([{{latitude}}, {{longitude}}], {title: "{{title}}"});
+      // marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+     marker.bindPopup("<h1><strong>{{location}}</strong></h1>" 
+            + "Coordinates(" + {{latitude}} + "," 
+            + {{longitude}} + ")"
+            + "<br>"
+            + "<a href='/station/{{_id}}'>View Readings</a>"
+            );
+    
+      // circle.bindPopup("I am a circle."); polygon.bindPopup("I am a polygon.");
+    marker.addTo(map)
+    {{/each}}
+  </script>
+</div>

@@ -14,6 +14,7 @@ export const dashboardController = {
       stations: stations,
     };
     console.log("dashboard rendering");
+    
     response.render("dashboard-view", viewData);
   },
 
