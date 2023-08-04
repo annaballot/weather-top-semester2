@@ -16,7 +16,7 @@ export const accountsController = {
   },
 
   logout(request, response) {
-    response.cookie("playlist", "");
+    response.cookie("station", "");
     response.redirect("/");
   },
 
@@ -31,17 +31,24 @@ export const accountsController = {
     const user = request.body;
     await userStore.addUser(user);
     console.log(`registering ${user.email}`);
-    response.redirect("/");
+    const viewData = {
+      title: "Login to the Service",
+    };
+    response.render("login-view", viewData);
   },
 
   async authenticate(request, response) {
     const user = await userStore.getUserByEmail(request.body.email);
-    if (user) {
+    const passwordEntered = request.body.password;
+    if (user && (passwordEntered === user.password)) {
       response.cookie("playlist", user.email);
       console.log(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
-      response.redirect("/login");
+      const viewData = {
+      userMessage: "Incorrect Email + Password combination, please try again.",
+    };
+      response.render("login-view", viewData);
     }
   },
 

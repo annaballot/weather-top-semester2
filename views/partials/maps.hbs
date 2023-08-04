@@ -11,15 +11,13 @@
     {{#each stations}}
    
        marker = L.marker([{{latitude}}, {{longitude}}], {title: "{{title}}"});
-      // marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-     marker.bindPopup("<h1><strong>{{location}}</strong></h1>" 
+     marker.bindPopup("<h1><strong>{{title}}</strong></h1>" 
             + "Coordinates(" + {{latitude}} + "," 
             + {{longitude}} + ")"
+            + {{latestWeatherDescription}}
             + "<br>"
             + "<a href='/station/{{_id}}'>View Readings</a>"
             );
-    
-      // circle.bindPopup("I am a circle."); polygon.bindPopup("I am a polygon.");
     marker.addTo(map)
     {{/each}}
   </script>
