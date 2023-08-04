@@ -79,6 +79,8 @@ export const stationStore = {
     station.temperatureTrend = updatedStation.temperatureTrend;
     station.windSpeedTrend = updatedStation.windSpeedTrend;
     station.pressureTrend = updatedStation.pressureTrend;
+    station.apiTempTrend = updatedStation.apiTempTrend,
+    station.apiTrendLabels = updatedStation.apiTrendLabels,
       
     await db.write();
   },

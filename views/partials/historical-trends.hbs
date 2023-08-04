@@ -1,0 +1,43 @@
+<div class="box" id="chart"></div>
+<!-- <script>
+  data = {
+    labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+      { values: [18, 40, 30, 35, 8, 52, 17, -4] }
+    ]
+  };
+  new frappe.Chart("#chart", {
+    data: data,
+    type: "line",
+    height: 180,
+    colors: ["red"]
+  });
+</script> -->
+
+<script>
+  const data = {
+    labels: [
+      {{#each apiTrendLabels}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Temperature", type: "line",
+        values: [
+          {{#each apiTempTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+
+  const chart = new frappe.Chart("#chart", {
+    title: "Temperature Trend",
+    data: data,
+    type: 'line',
+    height: 250,
+  })
+</script>
+

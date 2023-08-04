@@ -36,6 +36,8 @@ export const stationController = {
     const temperatureTrend = await station.temperatureTrend;
     const windSpeedTrend = await station.windSpeedTrend;
     const pressureTrend = await station.pressureTrend;
+    const apiTempTrend = await station.apiTempTrend;
+    const apiTrendLabels = await station.apiTrendLabels;
 
     console.log(
       `station.latestWeatherDescription ${station.latestWeatherDescription}`
@@ -63,6 +65,8 @@ export const stationController = {
       temperatureTrend: temperatureTrend,
       windSpeedTrend: windSpeedTrend,
       pressureTrend: pressureTrend,
+      apiTempTrend: apiTempTrend,
+      apiTrendLabels: apiTrendLabels,
     };
     response.render("station-view", viewData);
   },
@@ -81,6 +85,8 @@ export const stationController = {
     const result = await axios.get(oneCallRequest);
 
     if (result.status == 200) {
+      console.log(`API DATA AB`);
+        console.log(result.data);
       const APIreading = result.data.current;
       newReading.submittedDate = submittedDate;
       newReading.code = APIreading.weather[0].id;
@@ -88,6 +94,15 @@ export const stationController = {
       newReading.windSpeed = APIreading.wind_speed;
       newReading.pressure = APIreading.pressure;
       newReading.windDirection = APIreading.wind_deg;
+      
+      newReading.apiTempTrend = [];
+      newReading.apiTrendLabels = [];
+      const trends = result.data.daily;
+      for (let i=0; i<trends.length; i++) {
+        newReading.apiTempTrend.push(trends[i].temp.day);
+        const date = new Date(trends[i].dt*1000).toLocaleDateString("en-uk");
+        newReading.apiTrendLabels.push(`${date}`);
+      }
     }
     console.log(newReading);
 
