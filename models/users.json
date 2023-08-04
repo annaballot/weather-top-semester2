@@ -7,6 +7,20 @@
       "email": "annaballot@gmail.com",
       "password": "test",
       "_id": "29c8199f-d8a0-4d49-a24d-1e63b97b7631"
+    },
+    {
+      "firstName": "emma",
+      "lastName": "ballot",
+      "email": "emma@test.ie",
+      "password": "test",
+      "_id": "4b15406a-06d9-4cd2-8a7a-e35c2d3c458c"
+    },
+    {
+      "firstName": "t",
+      "lastName": "t",
+      "email": "t",
+      "password": "t",
+      "_id": "795fa0b0-bb9b-413b-9faf-cada3105e1f1"
     }
   ]
 }
