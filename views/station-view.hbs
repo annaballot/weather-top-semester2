@@ -4,11 +4,28 @@
   <div class="title">
     {{station.title}}
   </div>
+  
+  
   <div class="subtitle">
+    
+    <!-- Check there is at least 1 reading -->
+{{#if (gt0 station.readings.length)}} 
+    
+    
     {{> station-summary}}
-    {{> historical-trends}}
   </div>
+   {{> chart-trends}}
   {{> list-readings}}
+  
+  
+  
+  <!-- If there is no reading, display a different summary -->
+
+          {{else}}
+{{> no-readings}}
+          {{/if}}
+  
+  
   {{> add-reading}}
   {{> add-reading-api}}
 </section>

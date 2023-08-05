@@ -1,6 +1,6 @@
 export const stationConversions = {
   convertTempToFahrenheit(temperature) {
-    return temperature * (9 / 5) + 32;
+    return Math.round((temperature * (9 / 5) + 32)*100)/100;
   },
 
   calculateWindChill(temperature, windSpeed) {

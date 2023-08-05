@@ -9,6 +9,17 @@
   <a href="/dashboard/deleteStation/{{_id}}" class="button">
     {{>icons/delete}}
   </a>
+  
+    <!-- Check there is at least 1 reading -->
+{{#if (gt0 readings.length)}} 
+  
   {{> station-summary}}
+  
+  
+  
+  
+            {{else}}
+{{> no-readings}}
+          {{/if}}
 </div>
 {{/each}}
