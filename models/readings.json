@@ -760,6 +760,46 @@
       ],
       "_id": "2ca4b09a-a28f-43ba-b5a3-1e48d1d1e4e7",
       "stationid": "605393ae-3115-47ee-86c3-5d51f08de7c8"
+    },
+    {
+      "submittedDate": "2023-08-05T10:19:48.786Z",
+      "code": 200,
+      "temperature": 18.86,
+      "windSpeed": 1,
+      "windDirection": 1,
+      "pressure": 1000,
+      "_id": "f839eb54-c5fd-4832-9130-07cab276b5f7",
+      "stationid": "605393ae-3115-47ee-86c3-5d51f08de7c8"
+    },
+    {
+      "submittedDate": "2023-08-05T10:22:19.769Z",
+      "code": 800,
+      "temperature": 23.47,
+      "windSpeed": 2.42,
+      "pressure": 1018,
+      "windDirection": 337,
+      "apiTempTrend": [
+        23.57,
+        23.88,
+        24.99,
+        28.16,
+        31.76,
+        29.95,
+        30.36,
+        28.76
+      ],
+      "apiTrendLabels": [
+        "05/08/2023",
+        "06/08/2023",
+        "07/08/2023",
+        "08/08/2023",
+        "09/08/2023",
+        "10/08/2023",
+        "11/08/2023",
+        "12/08/2023"
+      ],
+      "_id": "477cc56f-0f45-46a5-b925-99061fb591cc",
+      "stationid": "605393ae-3115-47ee-86c3-5d51f08de7c8"
     }
   ]
 }

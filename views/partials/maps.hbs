@@ -5,20 +5,17 @@
   <script>
     const map = L.map('map').setView([53.3498, -6.2603], 3);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19,
-    attribution: '© OpenStreetMap' }).addTo(map);
-    
-     let marker, popup;
+    attribution: '© OpenStreetMap' }).addTo(map); let marker, popup;
     {{#each stations}}
-   
-       marker = L.marker([{{latitude}}, {{longitude}}], {title: "{{title}}"});
-     marker.bindPopup("<h1><strong>{{title}}</strong></h1>" 
-            + "Coordinates(" + {{latitude}} + "," 
-            + {{longitude}} + ")"
-            + {{latestWeatherDescription}}
-            + "<br>"
-            + "<a href='/station/{{_id}}'>View Readings</a>"
-            );
-    marker.addTo(map)
+
+      marker = L.marker([{{latitude}},
+      {{longitude}}], {title: "{{title}}"}); marker.bindPopup("<h1><strong>{{title}}</strong></h1>"
+      + "Coordinates(" +
+      {{latitude}}
+      + "," +
+      {{longitude}}
+      + ")" + "<br>" + "<a href='/station/{{_id}}'>View Readings</a>" );
+      marker.addTo(map)
     {{/each}}
   </script>
 </div>

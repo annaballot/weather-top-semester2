@@ -4,6 +4,10 @@ export const handlebarsHelpers = {
    */  
   eq: function(a, b){
     return (a === b);
+  },
+  
+  gt0: function(a){
+    return (a > 0);
   }
 };
 
