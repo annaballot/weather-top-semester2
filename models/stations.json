@@ -177,15 +177,45 @@
           ],
           "_id": "c6fe48cf-c8b9-4b9e-a98c-d97af9bf39a0",
           "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-08T17:26:52.846Z",
+          "code": 804,
+          "temperature": 15.65,
+          "windSpeed": 1.34,
+          "pressure": 1015,
+          "windDirection": 180,
+          "apiTempTrend": [
+            15.72,
+            19.57,
+            18.09,
+            17.5,
+            16.29,
+            17.27,
+            18.48,
+            16.93
+          ],
+          "apiTrendLabels": [
+            "08/08/2023",
+            "09/08/2023",
+            "10/08/2023",
+            "11/08/2023",
+            "12/08/2023",
+            "13/08/2023",
+            "14/08/2023",
+            "15/08/2023"
+          ],
+          "_id": "7ea105fc-a884-4fdb-b927-bdc5fc9bb656",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
         }
       ],
-      "latestWeatherDescription": "Rain",
-      "latestTempC": 15.76,
-      "latestTempF": 60.367999999999995,
+      "latestWeatherDescription": "Clouds",
+      "latestTempC": 15.65,
+      "latestTempF": 60.17,
       "latestBFT": 1,
-      "latestCompassDirection": "South-Southwest",
-      "latestWindChill": 16.4,
-      "latestPressure": 1019,
+      "latestCompassDirection": "South",
+      "latestWindChill": 17.4,
+      "latestPressure": 1015,
       "maxTemperature": 15.76,
       "minTemperature": 1,
       "maxWindSpeed": 4.29,
@@ -196,24 +226,24 @@
       "temperatureTrend": 0,
       "windSpeedTrend": 0,
       "apiTempTrend": [
-        16.4,
-        16.44,
-        17.03,
-        11.81,
-        19.38,
-        17,
-        21.71,
-        21.45
+        15.72,
+        19.57,
+        18.09,
+        17.5,
+        16.29,
+        17.27,
+        18.48,
+        16.93
       ],
       "apiTrendLabels": [
-        "04/08/2023",
-        "05/08/2023",
-        "06/08/2023",
-        "07/08/2023",
         "08/08/2023",
         "09/08/2023",
         "10/08/2023",
-        "11/08/2023"
+        "11/08/2023",
+        "12/08/2023",
+        "13/08/2023",
+        "14/08/2023",
+        "15/08/2023"
       ]
     },
     {
