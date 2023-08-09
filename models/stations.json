@@ -207,6 +207,106 @@
           ],
           "_id": "7ea105fc-a884-4fdb-b927-bdc5fc9bb656",
           "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-08T17:48:02.059Z",
+          "code": 804,
+          "temperature": 15.65,
+          "windSpeed": 1.79,
+          "pressure": 1015,
+          "windDirection": 178,
+          "apiTempTrend": [
+            15.72,
+            19.57,
+            18.09,
+            17.5,
+            16.29,
+            17.27,
+            18.48,
+            16.93
+          ],
+          "apiHumidityTrend": [
+            95,
+            82,
+            90,
+            79,
+            92,
+            80,
+            68,
+            61
+          ],
+          "apiWindSpeedTrend": [
+            2.8,
+            3.23,
+            6.78,
+            9.37,
+            8.42,
+            7.81,
+            5.12,
+            3.29
+          ],
+          "apiTrendLabels": [
+            "08/08/2023",
+            "09/08/2023",
+            "10/08/2023",
+            "11/08/2023",
+            "12/08/2023",
+            "13/08/2023",
+            "14/08/2023",
+            "15/08/2023"
+          ],
+          "_id": "eed53d99-22fc-41d4-9231-2786fd37cb27",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
+        },
+        {
+          "submittedDate": "2023-08-08T17:48:22.044Z",
+          "code": 804,
+          "temperature": 15.65,
+          "windSpeed": 1.79,
+          "pressure": 1015,
+          "windDirection": 178,
+          "apiTempTrend": [
+            15.45,
+            19.96,
+            18.27,
+            17.86,
+            17.62,
+            17.52,
+            17.29,
+            16.28
+          ],
+          "apiHumidityTrend": [
+            94,
+            85,
+            88,
+            79,
+            88,
+            76,
+            77,
+            75
+          ],
+          "apiWindSpeedTrend": [
+            2.51,
+            3.99,
+            7.46,
+            9.58,
+            9.37,
+            5.48,
+            5.52,
+            3.16
+          ],
+          "apiTrendLabels": [
+            "08/08/2023",
+            "09/08/2023",
+            "10/08/2023",
+            "11/08/2023",
+            "12/08/2023",
+            "13/08/2023",
+            "14/08/2023",
+            "15/08/2023"
+          ],
+          "_id": "7919b4c2-2158-4f49-b353-7c3cd47e7134",
+          "stationid": "9b919cd3-d17c-4bee-a49f-4862f3507f13"
         }
       ],
       "latestWeatherDescription": "Clouds",
@@ -214,7 +314,7 @@
       "latestTempF": 60.17,
       "latestBFT": 1,
       "latestCompassDirection": "South",
-      "latestWindChill": 17.4,
+      "latestWindChill": 17.2,
       "latestPressure": 1015,
       "maxTemperature": 15.76,
       "minTemperature": 1,
@@ -226,14 +326,14 @@
       "temperatureTrend": 0,
       "windSpeedTrend": 0,
       "apiTempTrend": [
-        15.72,
-        19.57,
-        18.09,
-        17.5,
-        16.29,
-        17.27,
-        18.48,
-        16.93
+        15.45,
+        19.96,
+        18.27,
+        17.86,
+        17.62,
+        17.52,
+        17.29,
+        16.28
       ],
       "apiTrendLabels": [
         "08/08/2023",
@@ -244,6 +344,26 @@
         "13/08/2023",
         "14/08/2023",
         "15/08/2023"
+      ],
+      "apiHumidityTrend": [
+        94,
+        85,
+        88,
+        79,
+        88,
+        76,
+        77,
+        75
+      ],
+      "apiWindSpeedTrend": [
+        2.51,
+        3.99,
+        7.46,
+        9.58,
+        9.37,
+        5.48,
+        5.52,
+        3.16
       ]
     },
     {
@@ -253,16 +373,6 @@
       "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
       "_id": "605393ae-3115-47ee-86c3-5d51f08de7c8",
       "readings": [
-        {
-          "submittedDate": "2023-08-01T18:32:33.941Z",
-          "code": 800,
-          "temperature": 19.73,
-          "windSpeed": 2.59,
-          "pressure": 1015,
-          "windDirection": 3,
-          "_id": "b62185b3-6923-4c9e-9a94-7e22dc0008b5",
-          "stationid": "605393ae-3115-47ee-86c3-5d51f08de7c8"
-        },
         {
           "submittedDate": "2023-08-02T07:40:20.653Z",
           "code": 800,
@@ -384,42 +494,62 @@
           "stationid": "605393ae-3115-47ee-86c3-5d51f08de7c8"
         },
         {
-          "submittedDate": "2023-08-05T10:22:19.769Z",
+          "submittedDate": "2023-08-08T17:50:35.744Z",
           "code": 800,
-          "temperature": 23.47,
-          "windSpeed": 2.42,
+          "temperature": 25.22,
+          "windSpeed": 0.98,
           "pressure": 1018,
-          "windDirection": 337,
+          "windDirection": 277,
           "apiTempTrend": [
-            23.57,
-            23.88,
-            24.99,
-            28.16,
-            31.76,
-            29.95,
-            30.36,
-            28.76
+            26.9,
+            32.03,
+            33.22,
+            30.64,
+            30.59,
+            29.75,
+            28.61,
+            27.83
+          ],
+          "apiHumidityTrend": [
+            35,
+            18,
+            25,
+            30,
+            32,
+            35,
+            33,
+            35
+          ],
+          "apiWindSpeedTrend": [
+            2.91,
+            3.02,
+            5.63,
+            2.55,
+            3.68,
+            4.23,
+            5.01,
+            4.88
           ],
           "apiTrendLabels": [
-            "05/08/2023",
-            "06/08/2023",
-            "07/08/2023",
             "08/08/2023",
             "09/08/2023",
             "10/08/2023",
             "11/08/2023",
-            "12/08/2023"
+            "12/08/2023",
+            "13/08/2023",
+            "14/08/2023",
+            "15/08/2023"
           ],
-          "_id": "477cc56f-0f45-46a5-b925-99061fb591cc",
+          "_id": "73bb05bd-0410-435c-a569-0768283c80ad",
           "stationid": "605393ae-3115-47ee-86c3-5d51f08de7c8"
         }
       ],
       "latestWeatherDescription": "Clear",
-      "latestTempC": 23.47,
-      "latestTempF": 74.25,
-      "latestBFT": 1,
-      "latestCompassDirection": "North-Northwest",
-      "latestWindChill": 25.3,
+      "latestTempC": 25.22,
+      "latestTempF": 77.4,
+      "latestBFT": 0,
+      "latestCompassDirection": "West",
+      "latestWindChill": 27.4,
       "latestPressure": 1018,
       "maxTemperature": 40,
       "minTemperature": 10,
@@ -428,27 +558,47 @@
       "maxPressure": 1021,
       "minPressure": 1000,
       "temperatureTrend": 0,
-      "windSpeedTrend": 1,
+      "windSpeedTrend": 0,
       "pressureTrend": 0,
       "apiTempTrend": [
-        23.57,
-        23.88,
-        24.99,
-        28.16,
-        31.76,
-        29.95,
-        30.36,
-        28.76
+        26.9,
+        32.03,
+        33.22,
+        30.64,
+        30.59,
+        29.75,
+        28.61,
+        27.83
+      ],
+      "apiHumidityTrend": [
+        35,
+        18,
+        25,
+        30,
+        32,
+        35,
+        33,
+        35
+      ],
+      "apiWindSpeedTrend": [
+        2.91,
+        3.02,
+        5.63,
+        2.55,
+        3.68,
+        4.23,
+        5.01,
+        4.88
       ],
       "apiTrendLabels": [
-        "05/08/2023",
-        "06/08/2023",
-        "07/08/2023",
         "08/08/2023",
         "09/08/2023",
         "10/08/2023",
         "11/08/2023",
-        "12/08/2023"
+        "12/08/2023",
+        "13/08/2023",
+        "14/08/2023",
+        "15/08/2023"
       ]
     },
     {
@@ -464,6 +614,181 @@
       "longitude": 1,
       "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
       "_id": "bc237c4f-38b9-4417-88e7-6cd4200ae1ce"
+    },
+    {
+      "title": "Rome",
+      "latitude": 41.9,
+      "longitude": 12.496,
+      "userid": "29c8199f-d8a0-4d49-a24d-1e63b97b7631",
+      "_id": "e4e986b2-67f2-4ce2-8594-7174668ef6db",
+      "readings": [
+        {
+          "submittedDate": "2023-08-08T17:51:56.239Z",
+          "code": 800,
+          "temperature": 25.96,
+          "windSpeed": 4.63,
+          "pressure": 1016,
+          "windDirection": 240,
+          "apiTempTrend": [
+            29.92,
+            29.11,
+            31.09,
+            32.3,
+            34.42,
+            33.93,
+            32.96,
+            33.76
+          ],
+          "apiHumidityTrend": [
+            30,
+            27,
+            29,
+            30,
+            24,
+            29,
+            36,
+            31
+          ],
+          "apiWindSpeedTrend": [
+            5.31,
+            5.04,
+            5.34,
+            4.95,
+            5.72,
+            5.18,
+            5.1,
+            5.74
+          ],
+          "apiTrendLabels": [
+            "08/08/2023",
+            "09/08/2023",
+            "10/08/2023",
+            "11/08/2023",
+            "12/08/2023",
+            "13/08/2023",
+            "14/08/2023",
+            "15/08/2023"
+          ],
+          "_id": "c5f33fb0-277d-4e2d-b664-996a5b8ae9dd",
+          "stationid": "e4e986b2-67f2-4ce2-8594-7174668ef6db"
+        },
+        {
+          "submittedDate": "2023-08-08T17:57:12.053Z",
+          "code": 200,
+          "temperature": 15,
+          "windSpeed": 100,
+          "windDirection": 15,
+          "pressure": 1000,
+          "_id": "c708ef0e-fe98-478e-983c-e2ab74cc16fb",
+          "stationid": "e4e986b2-67f2-4ce2-8594-7174668ef6db"
+        },
+        {
+          "submittedDate": "2023-08-08T17:57:19.448Z",
+          "code": 800,
+          "temperature": 25.4,
+          "windSpeed": 3.09,
+          "pressure": 1016,
+          "windDirection": 230,
+          "apiTempTrend": [
+            29.92,
+            29.11,
+            31.09,
+            32.3,
+            34.42,
+            33.93,
+            32.96,
+            33.76
+          ],
+          "apiHumidityTrend": [
+            30,
+            27,
+            29,
+            30,
+            24,
+            29,
+            36,
+            31
+          ],
+          "apiWindSpeedTrend": [
+            5.31,
+            5.04,
+            5.34,
+            4.95,
+            5.72,
+            5.18,
+            5.1,
+            5.74
+          ],
+          "apiTrendLabels": [
+            "08/08/2023",
+            "09/08/2023",
+            "10/08/2023",
+            "11/08/2023",
+            "12/08/2023",
+            "13/08/2023",
+            "14/08/2023",
+            "15/08/2023"
+          ],
+          "_id": "29e0af7c-d386-4f53-b99e-eed031191351",
+          "stationid": "e4e986b2-67f2-4ce2-8594-7174668ef6db"
+        }
+      ],
+      "latestWeatherDescription": "Clear",
+      "latestTempC": 25.4,
+      "latestTempF": 77.72,
+      "latestBFT": 1,
+      "latestCompassDirection": "Southwest",
+      "latestWindChill": 27.4,
+      "latestPressure": 1016,
+      "maxTemperature": 25.96,
+      "minTemperature": 15,
+      "maxWindSpeed": 100,
+      "minWindSpeed": 3.09,
+      "maxPressure": 1016,
+      "minPressure": 1000,
+      "temperatureTrend": 0,
+      "windSpeedTrend": 0,
+      "pressureTrend": 0,
+      "apiTempTrend": [
+        29.92,
+        29.11,
+        31.09,
+        32.3,
+        34.42,
+        33.93,
+        32.96,
+        33.76
+      ],
+      "apiHumidityTrend": [
+        30,
+        27,
+        29,
+        30,
+        24,
+        29,
+        36,
+        31
+      ],
+      "apiWindSpeedTrend": [
+        5.31,
+        5.04,
+        5.34,
+        4.95,
+        5.72,
+        5.18,
+        5.1,
+        5.74
+      ],
+      "apiTrendLabels": [
+        "08/08/2023",
+        "09/08/2023",
+        "10/08/2023",
+        "11/08/2023",
+        "12/08/2023",
+        "13/08/2023",
+        "14/08/2023",
+        "15/08/2023"
+      ]
     }
   ]
 }
