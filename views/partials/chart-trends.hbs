@@ -1,7 +1,13 @@
-<div class="box" id="chart"></div>
+<div class="box">
+  <div class="title">
+    Forecast Trends
+  </div>
+
+
+<div class="box" id="chartTemp"></div>
 
 <script>
-  const data = {
+  const dataTemp = {
     labels: [
       {{#each apiTrendLabels}}
         "{{this}}",
@@ -19,11 +25,73 @@
     ]
   }
 
-  const chart = new frappe.Chart("#chart", {
-    title: "Temperature Forecast Trend",
-    data: data,
+  const chartTemp = new frappe.Chart("#chartTemp", {
+    title: "Temperature",
+    data: dataTemp,
     type: 'line',
     height: 250,
   })
+  
 </script>
 
+
+<div class="box" id="chartHumidity"></div>
+<script>
+const dataHumidity = {
+    labels: [
+      {{#each apiTrendLabels}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Humidity", type: "line",
+        values: [
+          {{#each apiHumidityTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+
+  const chartHumidity = new frappe.Chart("#chartHumidity", {
+    title: "Humidity",
+    data: dataHumidity,
+    type: 'line',
+    height: 250,
+  })
+
+  </script>
+  
+  
+  
+  <div class="box" id="chartWindSpeed"></div>
+<script>
+const dataWindSpeed = {
+    labels: [
+      {{#each apiTrendLabels}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "WindSpeed", type: "line",
+        values: [
+          {{#each apiWindSpeedTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+
+  const chartWindSpeed = new frappe.Chart("#chartWindSpeed", {
+    title: "WindSpeed",
+    data: dataWindSpeed,
+    type: 'line',
+    height: 250,
+  })
+
+  </script>
+  </div>

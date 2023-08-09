@@ -80,6 +80,8 @@ export const stationStore = {
     station.windSpeedTrend = updatedStation.windSpeedTrend;
     station.pressureTrend = updatedStation.pressureTrend;
     station.apiTempTrend = updatedStation.apiTempTrend,
+    station.apiHumidityTrend = updatedStation.apiHumidityTrend,  
+    station.apiWindSpeedTrend = updatedStation.apiWindSpeedTrend, 
     station.apiTrendLabels = updatedStation.apiTrendLabels,
       
     await db.write();

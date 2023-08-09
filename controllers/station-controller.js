@@ -37,6 +37,8 @@ export const stationController = {
     const windSpeedTrend = await station.windSpeedTrend;
     const pressureTrend = await station.pressureTrend;
     const apiTempTrend = await station.apiTempTrend;
+    const apiHumidityTrend = await station.apiHumidityTrend;
+    const apiWindSpeedTrend = await station.apiWindSpeedTrend;
     const apiTrendLabels = await station.apiTrendLabels;
 
     console.log(
@@ -66,6 +68,8 @@ export const stationController = {
       windSpeedTrend: windSpeedTrend,
       pressureTrend: pressureTrend,
       apiTempTrend: apiTempTrend,
+      apiHumidityTrend: apiHumidityTrend,
+      apiWindSpeedTrend: apiWindSpeedTrend,
       apiTrendLabels: apiTrendLabels,
     };
     response.render("station-view", viewData);
@@ -96,10 +100,14 @@ export const stationController = {
       newReading.windDirection = APIreading.wind_deg;
       
       newReading.apiTempTrend = [];
+      newReading.apiHumidityTrend = [];
+      newReading.apiWindSpeedTrend = [];
       newReading.apiTrendLabels = [];
       const trends = result.data.daily;
       for (let i=0; i<trends.length; i++) {
         newReading.apiTempTrend.push(trends[i].temp.day);
+        newReading.apiHumidityTrend.push(trends[i].humidity);
+        newReading.apiWindSpeedTrend.push(trends[i].wind_speed);
         const date = new Date(trends[i].dt*1000).toLocaleDateString("en-uk");
         newReading.apiTrendLabels.push(`${date}`);
       }
