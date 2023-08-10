@@ -4,7 +4,6 @@ import { readingStore } from "./reading-store.js";
 import { stationAnalytics } from "../utils/analytics.js";
 import { stationController } from "../controllers/station-controller.js";
 
-
 const db = initStore("stations");
 
 export const stationStore = {
@@ -39,26 +38,25 @@ export const stationStore = {
     db.data.stations = [];
     await db.write();
   },
-  
+
   async getLatestReading(id) {
     await db.read();
     const list = db.data.stations.find((station) => station._id === id);
     list.readings = await readingStore.getReadingsByStationId(list._id);
-    return list.readings[list.readings.length-1];    
+    return list.readings[list.readings.length - 1];
   },
-  
+
   async getStationsByUserId(userid) {
     await db.read();
-    return db.data.stations.filter((station) => station.userid === userid)
+    return db.data.stations.filter((station) => station.userid === userid);
   },
-  
+
   //   async updateStationWeather(id) {
   //   stationAnalytics.updateWeather(id);
   //   await db.write();
   // },
-  
-  
-    async updateStation(station, updatedStation) {
+
+  async updateStation(station, updatedStation) {
     station.title = updatedStation.title;
     station.latitude = updatedStation.latitude;
     station.longitude = updatedStation.longitude;
@@ -79,19 +77,17 @@ export const stationStore = {
     station.temperatureTrend = updatedStation.temperatureTrend;
     station.windSpeedTrend = updatedStation.windSpeedTrend;
     station.pressureTrend = updatedStation.pressureTrend;
-    station.apiTempTrend = updatedStation.apiTempTrend,
-    station.apiHumidityTrend = updatedStation.apiHumidityTrend,  
-    station.apiWindSpeedTrend = updatedStation.apiWindSpeedTrend, 
-    station.apiTrendLabels = updatedStation.apiTrendLabels,
-      
-    await db.write();
+    (station.apiTempTrend = updatedStation.apiTempTrend),
+      (station.apiHumidityTrend = updatedStation.apiHumidityTrend),
+      (station.apiWindSpeedTrend = updatedStation.apiWindSpeedTrend),
+      (station.apiTrendLabels = updatedStation.apiTrendLabels),
+      await db.write();
   },
-  
 
-  
   async sortStations(stations) {
     //sorts stations alphabetically by title, ignoring the case
-    return stations.sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1);
+    return stations.sort((a, b) =>
+      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+    );
   },
-  
 };

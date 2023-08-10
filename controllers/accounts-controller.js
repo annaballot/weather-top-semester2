@@ -40,14 +40,15 @@ export const accountsController = {
   async authenticate(request, response) {
     const user = await userStore.getUserByEmail(request.body.email);
     const passwordEntered = request.body.password;
-    if (user && (passwordEntered === user.password)) {
+    if (user && passwordEntered === user.password) {
       response.cookie("playlist", user.email);
       console.log(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
       const viewData = {
-      userMessage: "Incorrect Email + Password combination, please try again.",
-    };
+        userMessage:
+          "Incorrect Email + Password combination, please try again.",
+      };
       response.render("login-view", viewData);
     }
   },
@@ -56,5 +57,4 @@ export const accountsController = {
     const userEmail = request.cookies.playlist;
     return await userStore.getUserByEmail(userEmail);
   },
-  
 };
