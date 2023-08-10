@@ -92,26 +92,37 @@ export const stationAnalytics = {
       return 0;
     }
   },
-  
+
   async updateStationSummary(id) {
-   /**************************************************************
+    /**************************************************************
     Update the staion model with all the trends latest readings 
     after the new reading has been added
     **************************************************************/
     const latestReading = await stationStore.getLatestReading(id);
-    const station = await stationStore.getStationById(id); // update station after new reading has been added
+    const station = await stationStore.getStationById(id); 
     const maxTemperature = await stationAnalytics.getMaxTemperature(station);
     const minTemperature = await stationAnalytics.getMinTemperature(station);
     const maxWindSpeed = await stationAnalytics.getMaxWindSpeed(station);
     const minWindSpeed = await stationAnalytics.getMinWindSpeed(station);
     const maxPressure = await stationAnalytics.getMaxPressure(station);
     const minPressure = await stationAnalytics.getMinPressure(station);
-    const latestWeatherDescription = await stationConversions.convertWeatherCodes(latestReading.code);
+    const latestWeatherDescription =
+      await stationConversions.convertWeatherCodes(latestReading.code);
     const latestTempC = await latestReading.temperature;
-    const latestTempF = await stationConversions.convertTempToFahrenheit(latestReading.temperature);
-    const latestBFT = await stationConversions.convertBeaufort(latestReading.windSpeed);
-    const latestCompassDirection = await stationConversions.convertWindDirection(latestReading.windDirection);
-    const latestWindChill = await stationConversions.calculateWindChill(latestReading.temperature,latestReading.windSpeed);
+    const latestTempF = await stationConversions.convertTempToFahrenheit(
+      latestReading.temperature
+    );
+    const latestBFT = await stationConversions.convertBeaufort(
+      latestReading.windSpeed
+    );
+    const latestCompassDirection =
+      await stationConversions.convertWindDirection(
+        latestReading.windDirection
+      );
+    const latestWindChill = await stationConversions.calculateWindChill(
+      latestReading.temperature,
+      latestReading.windSpeed
+    );
     const pressureTrend = await stationTrends.pressureTrend(station);
     const temperatureTrend = await stationTrends.temperatureTrend(station);
     const windSpeedTrend = await stationTrends.windSpeedTrend(station);
@@ -119,7 +130,7 @@ export const stationAnalytics = {
     const apiHumidityTrend = await latestReading.apiHumidityTrend;
     const apiWindSpeedTrend = await latestReading.apiWindSpeedTrend;
     const apiTrendLabels = await latestReading.apiTrendLabels;
-     
+
     const updatedStation = {
       title: station.title,
       latitude: station.latitude,
@@ -145,7 +156,6 @@ export const stationAnalytics = {
       apiHumidityTrend: apiHumidityTrend,
       apiWindSpeedTrend: apiWindSpeedTrend,
       apiTrendLabels: apiTrendLabels,
-      
     };
 
     await stationStore.updateStation(station, updatedStation);

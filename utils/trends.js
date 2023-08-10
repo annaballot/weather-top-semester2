@@ -14,8 +14,8 @@ export const stationTrends = {
     }
     return trend;
   },
-  
-    temperatureTrend(station) {
+
+  temperatureTrend(station) {
     let trend = 0;
     if (station.readings.length > 2) {
       let values = [
@@ -28,8 +28,8 @@ export const stationTrends = {
     }
     return trend;
   },
-  
-      windSpeedTrend(station) {
+
+  windSpeedTrend(station) {
     let trend = 0;
     if (station.readings.length > 2) {
       let values = [
@@ -42,8 +42,8 @@ export const stationTrends = {
     }
     return trend;
   },
-  
-      pressureTrend(station) {
+
+  pressureTrend(station) {
     let trend = 0;
     if (station.readings.length > 2) {
       let values = [
@@ -56,8 +56,4 @@ export const stationTrends = {
     }
     return trend;
   },
-  
-
-  
-  
 };

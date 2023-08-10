@@ -8,9 +8,6 @@ import { stationTrends } from "../utils/trends.js";
 import { dateTimeHelpers } from "../utils/date-time.js";
 
 export const stationController = {
-  /***********************************************************************************************************************************************************************************
-   ************************************************************************************************************************************************************************************/
-
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
 
@@ -40,10 +37,6 @@ export const stationController = {
     const apiHumidityTrend = await station.apiHumidityTrend;
     const apiWindSpeedTrend = await station.apiWindSpeedTrend;
     const apiTrendLabels = await station.apiTrendLabels;
-
-    console.log(
-      `station.latestWeatherDescription ${station.latestWeatherDescription}`
-    );
 
     const viewData = {
       title: title,
@@ -75,9 +68,6 @@ export const stationController = {
     response.render("station-view", viewData);
   },
 
-  /***********************************************************************************************************************************************************************************
-   ************************************************************************************************************************************************************************************/
-
   async addReadingAPI(request, response) {
     let station = await stationStore.getStationById(request.params.id);
     let submittedDate = await dateTimeHelpers.getCurrentDate();
@@ -90,7 +80,7 @@ export const stationController = {
 
     if (result.status == 200) {
       console.log(`API DATA AB`);
-        console.log(result.data);
+      console.log(result.data);
       const APIreading = result.data.current;
       newReading.submittedDate = submittedDate;
       newReading.code = APIreading.weather[0].id;
@@ -98,21 +88,20 @@ export const stationController = {
       newReading.windSpeed = APIreading.wind_speed;
       newReading.pressure = APIreading.pressure;
       newReading.windDirection = APIreading.wind_deg;
-      
+
       newReading.apiTempTrend = [];
       newReading.apiHumidityTrend = [];
       newReading.apiWindSpeedTrend = [];
       newReading.apiTrendLabels = [];
       const trends = result.data.daily;
-      for (let i=0; i<trends.length; i++) {
+      for (let i = 0; i < trends.length; i++) {
         newReading.apiTempTrend.push(trends[i].temp.day);
         newReading.apiHumidityTrend.push(trends[i].humidity);
         newReading.apiWindSpeedTrend.push(trends[i].wind_speed);
-        const date = new Date(trends[i].dt*1000).toLocaleDateString("en-uk");
+        const date = new Date(trends[i].dt * 1000).toLocaleDateString("en-uk");
         newReading.apiTrendLabels.push(`${date}`);
       }
     }
-    console.log(newReading);
 
     await readingStore.addReading(station._id, newReading);
     await stationAnalytics.updateStationSummary(request.params.id);

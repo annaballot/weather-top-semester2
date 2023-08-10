@@ -38,12 +38,12 @@ export const userStore = {
     db.data.users = [];
     await db.write();
   },
-  
+
   async updateUserDetails(user, updatedUser) {
     user.firstName = updatedUser.firstName;
     user.lastName = updatedUser.lastName;
     user.password = updatedUser.password;
-    user.email = updatedUser.email;      
+    user.email = updatedUser.email;
     await db.write();
   },
 };

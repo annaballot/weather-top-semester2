@@ -1,7 +1,6 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 
-
 const db = initStore("readings");
 
 export const readingStore = {
@@ -47,8 +46,4 @@ export const readingStore = {
   //   reading.duration = updatedReading.duration;
   //   await db.write();
   // },
-  
-
-  
-  
 };
