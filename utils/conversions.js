@@ -1,6 +1,11 @@
+/*
+  This conversions utility js files contains methods to convert user inputted / API 
+  values to a more desirable format
+*/
+
 export const stationConversions = {
   convertTempToFahrenheit(temperature) {
-    return Math.round((temperature * (9 / 5) + 32)*100)/100;
+    return Math.round((temperature * (9 / 5) + 32) * 100) / 100;
   },
 
   calculateWindChill(temperature, windSpeed) {

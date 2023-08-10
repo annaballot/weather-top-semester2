@@ -3,7 +3,6 @@ import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { stationController } from "./controllers/station-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
-import { userController } from "./controllers/user-controller.js";
 
 export const router = express.Router();
 
@@ -20,7 +19,7 @@ router.get("/station/:id", stationController.index);
 router.get("/station/:stationid/deletereading/:readingid", stationController.deleteReading);
 router.post("/station/:id/addreading", stationController.addReading);
 router.get("/about", aboutController.index);
-router.get("/myAccount", userController.index);
-router.post("/updateAccount", userController.updateAccountDetails);
+router.get("/myAccount", accountsController.viewAccountDetails);
+router.post("/updateAccount", accountsController.updateAccountDetails);
 router.post("/station/:id/addreadingapi", stationController.addReadingAPI);
 

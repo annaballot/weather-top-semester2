@@ -1,3 +1,8 @@
+/*
+  This analytics utility js files contains methods to get max/min values, trends, 
+  and update the station model with these values
+*/
+
 import { stationStore } from "../models/station-store.js";
 import { stationConversions } from "./conversions.js";
 import { stationTrends } from "./trends.js";
@@ -96,10 +101,10 @@ export const stationAnalytics = {
   async updateStationSummary(id) {
     /**************************************************************
     Update the staion model with all the trends latest readings 
-    after the new reading has been added
+    after a reading has been added or deleted
     **************************************************************/
     const latestReading = await stationStore.getLatestReading(id);
-    const station = await stationStore.getStationById(id); 
+    const station = await stationStore.getStationById(id);
     const maxTemperature = await stationAnalytics.getMaxTemperature(station);
     const minTemperature = await stationAnalytics.getMinTemperature(station);
     const maxWindSpeed = await stationAnalytics.getMaxWindSpeed(station);

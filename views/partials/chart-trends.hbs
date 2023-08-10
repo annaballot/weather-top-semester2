@@ -3,9 +3,8 @@
     Forecast Trends
   </div>
 
-
+<!-- Chart forecasted trends for temperature from API -->
 <div class="box" id="chartTemp"></div>
-
 <script>
   const dataTemp = {
     labels: [
@@ -24,17 +23,16 @@
       }
     ]
   }
-
   const chartTemp = new frappe.Chart("#chartTemp", {
     title: "Temperature",
     data: dataTemp,
     type: 'line',
     height: 250,
   })
-  
 </script>
 
 
+<!-- Chart forecasted trends for humidity from API -->
 <div class="box" id="chartHumidity"></div>
 <script>
 const dataHumidity = {
@@ -54,19 +52,17 @@ const dataHumidity = {
       }
     ]
   }
-
   const chartHumidity = new frappe.Chart("#chartHumidity", {
     title: "Humidity",
     data: dataHumidity,
     type: 'line',
     height: 250,
   })
-
-  </script>
+</script>
   
   
-  
-  <div class="box" id="chartWindSpeed"></div>
+<!-- Chart forecasted trends for WInd Speed from API -->  
+<div class="box" id="chartWindSpeed"></div>
 <script>
 const dataWindSpeed = {
     labels: [
@@ -85,13 +81,12 @@ const dataWindSpeed = {
       }
     ]
   }
-
   const chartWindSpeed = new frappe.Chart("#chartWindSpeed", {
     title: "WindSpeed",
     data: dataWindSpeed,
     type: 'line',
     height: 250,
   })
-
-  </script>
-  </div>
+</script>
+  
+</div>

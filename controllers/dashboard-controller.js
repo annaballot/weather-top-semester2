@@ -1,3 +1,8 @@
+/*
+  This dashboard-controller helps control all actions related to the dashboard
+  showing stations, adding or deleting stations etc
+*/
+
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { stationConversions } from "../utils/conversions.js";

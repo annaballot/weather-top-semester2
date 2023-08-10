@@ -1,25 +1,20 @@
 {{#each stations}}
-<div class="box box-link-hover-shadow">
-  <h2 class="title">
+  <div class="box box-link-hover-shadow">
+    <h2 class="title">
       {{title}}
-  </h2>
+    </h2>
     <a href="/station/{{_id}}" class="button">
-    {{>icons/open}}
-  </a>
-  <a href="/dashboard/deleteStation/{{_id}}" class="button">
-    {{>icons/delete}}
-  </a>
-  
-    <!-- Check there is at least 1 reading -->
-{{#if (gt0 readings.length)}} 
-  
-  {{> station-summary}}
-  
-  
-  
-  
-            {{else}}
-{{> no-readings}}
-          {{/if}}
-</div>
+      {{>icons/open}}
+    </a>
+    <a href="/dashboard/deleteStation/{{_id}}" class="button">
+      {{>icons/delete}}
+    </a>
+    
+  <!-- Check there is at least 1 reading -->
+    {{#if (gt0 readings.length)}} 
+      {{> station-summary}}
+    {{else}}
+      {{> no-readings}}
+    {{/if}}
+  </div>
 {{/each}}

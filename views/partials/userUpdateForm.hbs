@@ -1,40 +1,39 @@
 <section class="content box">
   <div class="columns">
     <div class="column">
-        <form action="/updateAccount" method="POST">
-          <h3 class="subtitle">Update Your Account Details</h3>
+      <form action="/updateAccount" method="POST">
+        <h3 class="subtitle">Update Your Account Details</h3>
+        <div class="field">
+          <label class="label">Email</label>
+          <p class="control">
+            <input class="input" value="{{email}}" type="email" name="email">
+          </p>
+        </div>
+        <div class="field is-horizontal field-body">
           <div class="field">
-            <label class="label">Email</label>
+            <label class="label">First Name</label>
+            <p class="control is-expanded">
+              <input class="input" type="text" value="{{firstName}}" name="firstName">
+            </p>
+          </div>
+          <div class="field">
+            <label class="label">Last Name</label>
             <p class="control">
-              <input class="input" value="{{email}}" type="email" name="email">
+              <input class="input" type="text" value="{{lastName}}" name="lastName">
             </p>
           </div>
-          <div class="field is-horizontal field-body">
-            <div class="field">
-              <label class="label">First Name</label>
-              <p class="control is-expanded">
-                <input class="input" type="text" value="{{firstName}}" name="firstName">
-              </p>
-            </div>
-            <div class="field">
-              <label class="label">Last Name</label>
-              <p class="control">
-                <input class="input" type="text" value="{{lastName}}" name="lastName">
-              </p>
-            </div>
-          </div>
+        </div>
 
-          <div class="field">
-            <label class="label">Password</label>
-            <p class="control has-icons-left">
-              
-              <input class="input" value="{{password}}" type="password" name="password">
-              <span class="icon is-small is-left">{{> icons/padlock}}</span>
-            </p>
-          </div>
-          <button class="button is-link">Submit</button>
-        </form>
-        <br>
-      </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <p class="control has-icons-left">
+            <input class="input" value="{{password}}" type="password" name="password">
+            <span class="icon is-small is-left">{{> icons/padlock}}</span>
+          </p>
+        </div>
+        <button class="button is-link">Submit</button>
+      </form>
+      <br>
     </div>
+  </div>
 </section>

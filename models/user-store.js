@@ -1,3 +1,7 @@
+/*
+  This station-store model contains methods to add, delete, update, and find users
+*/
+
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 

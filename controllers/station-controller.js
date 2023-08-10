@@ -1,3 +1,9 @@
+/*
+  This station-controller helps control all actions related to the station page
+  handles showing the stations and readings owned by that user,  latest weather 
+  and trends for station, adding and deleting readings, including from an API
+*/
+
 import axios from "axios";
 
 import { stationStore } from "../models/station-store.js";
@@ -68,6 +74,7 @@ export const stationController = {
     response.render("station-view", viewData);
   },
 
+  // Autogenerate a reading from an API
   async addReadingAPI(request, response) {
     let station = await stationStore.getStationById(request.params.id);
     let submittedDate = await dateTimeHelpers.getCurrentDate();
