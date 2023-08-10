@@ -1,20 +1,44 @@
 <form class="box" action="/dashboard/addstation" method="POST">
   <h2 class="title">
-      Add a new Weather Station:
+    Add a new Weather Station:
   </h2>
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
         <label class="label">Station Name</label>
-        <input class="input" type="text" placeholder="Enter station name" name="title" required>
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter station name"
+          name="title"
+          required
+        />
       </div>
       <div class="field">
         <label class="label">Latitude</label>
-        <input class="input" placeholder="00.00" type="number" name="latitude" step=".00001" min="-90" max="90" required>
+        <input
+          class="input"
+          placeholder="00.00"
+          type="number"
+          name="latitude"
+          step=".00001"
+          min="-90"
+          max="90"
+          required
+        />
       </div>
       <div class="field">
         <label class="label">Longitude</label>
-        <input class="input" placeholder="00.00" type="number" name="longitude" step=".00001" min="-180" max="180" required>
+        <input
+          class="input"
+          placeholder="00.00"
+          type="number"
+          name="longitude"
+          step=".00001"
+          min="-180"
+          max="180"
+          required
+        />
       </div>
     </div>
   </div>

@@ -1,3 +1,7 @@
+/*
+  This station-store model contains methods to add, delete, update, and find stations
+*/
+
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 import { readingStore } from "./reading-store.js";
@@ -50,11 +54,6 @@ export const stationStore = {
     await db.read();
     return db.data.stations.filter((station) => station.userid === userid);
   },
-
-  //   async updateStationWeather(id) {
-  //   stationAnalytics.updateWeather(id);
-  //   await db.write();
-  // },
 
   async updateStation(station, updatedStation) {
     station.title = updatedStation.title;

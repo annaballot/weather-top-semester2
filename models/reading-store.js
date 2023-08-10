@@ -1,3 +1,7 @@
+/*
+  This reading-store model contains methods to add readings, delete readings and find readings
+*/
+
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
 
@@ -40,10 +44,4 @@ export const readingStore = {
     await db.write();
   },
 
-  // async updateReading(reading, updatedReading) {
-  //   reading.title = updatedReading.title;
-  //   reading.artist = updatedReading.artist;
-  //   reading.duration = updatedReading.duration;
-  //   await db.write();
-  // },
 };

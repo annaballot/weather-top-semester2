@@ -1,3 +1,8 @@
+/*
+  This trends utility js file contains methods calculate trends in 
+  historical readings from each station
+*/
+
 import axios from "axios";
 
 import { stationStore } from "../models/station-store.js";
